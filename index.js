@@ -12,7 +12,6 @@ mongo.connect();
 app.use(cors());
 app.use(express.json());
 
-app.get('/',(res,req)=>{res.send("Welcome to the API....")})
 app.use("/register",registerRouter)
 app.use("/",auth.authenticationUser)
 app.use("/employees", employeeRouter);// middlewares
